@@ -89,8 +89,4 @@ gulp.task('default', function () {
 ```js
 npm install
 gulp
-
-
-## License
-
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+```
