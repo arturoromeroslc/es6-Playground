@@ -85,7 +85,7 @@ gulp.task('default', function () {
 ```
 
 ## How to get started 
-###Setup gulp watcher by running commands in terminal  
+Clone repo and run commands start coding ES6 code in es6 folder  
 ```js
 npm install
 gulp
