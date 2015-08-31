@@ -16,7 +16,7 @@ $ gulp
 
 ## API
 
-`babel` [https://babeljs.io/docs/learn-es2015/]
+babel: https://babeljs.io/docs/learn-es2015/
 
 ### babel inside of Gulp task
 
@@ -47,10 +47,12 @@ gulp.task('default', ['babel', 'watch']);
 ```js
 [1, 2, 3].map(n => n * 2);
 // -> [ 2, 4, 6 ]
+```
 
 #### ES5 equivalent:
 
 ```js
 [1, 2, 3].map(function(n) { return n * 2; }, this);
 // -> [ 2, 4, 6 ]
+```
 
