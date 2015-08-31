@@ -16,9 +16,9 @@ $ gulp
 
 ## API
 
-babel: https://babeljs.io/docs/learn-es2015/
+Babel: https://babeljs.io/docs/learn-es2015/
 
-### babel inside of Gulp task
+### Babel inside of Gulp task
 
 ```js
 var gulp = require('gulp'),
