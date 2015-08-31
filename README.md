@@ -9,9 +9,9 @@
 
 ```
 $ npm install
-$gulp
+$ gulp
 ```
-##Start coding in ES6, inside of the es6 folder
+### Inside of the es6 folder start coding with ES6 spec or with Javascript next... (ES7) 
 
 
 ## Usage
@@ -44,46 +44,36 @@ See the `babel` [options](https://babeljs.io/docs/usage/options/), except for `s
 Use [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) like this:
 
 ```js
-var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var babel = require('gulp-babel');
-var concat = require('gulp-concat');
+var gulp = require('gulp'),
+    babel = require('gulp-babel'),
+    plumber = require('gulp-plumber'),
+    es6Path = 'es6/*.js',
+    compilePath = 'es6/compiled';
 
-gulp.task('default', function () {
-  return gulp.src('src/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(concat('all.js'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist'));
+gulp.task('babel', function () {
+  gulp.src([es6Path])
+      .pipe(plumber())
+      .pipe(babel())
+      .pipe(gulp.dest(compilePath + '/babel'));
 });
+
+gulp.task('watch', function() {
+  gulp.watch([es6Path], ['babel'])
+});
+
+gulp.task('default', ['babel', 'watch']); 
 ```
 
 
-## Babel Metadata
-
-Files in the stream are annotated with a `babel` property, which
-contains the [metadata](http://babeljs.io/docs/advanced/external-helpers/#selective-builds) from `babel.transform()`.
-
-#### Example
+#### Example ES6: 
 
 ```js
-var gulp = require('gulp');
-var babel = require('gulp-babel');
-var through = require('through2');
+[1, 2, 3].map(n => n * 2);
+// -> [ 2, 4, 6 ]
 
-function logFileHelpers() {
-  return through.obj(function (file, enc, cb) {
-    console.log(file.babel.usedHelpers);
-    cb(null, file);
-  });
-}
+#### ES5 equivalent:
 
-gulp.task('default', function () {
-  return gulp.src('src/**/*.js')
-    .pipe(babel())
-    .pipe(logFileHelpers);
-})
-
-
+```js
+[1, 2, 3].map(function(n) { return n * 2; }, this);
+// -> [ 2, 4, 6 ]
 
