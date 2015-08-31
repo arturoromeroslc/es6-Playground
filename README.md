@@ -27,21 +27,11 @@ gulp.task('default', function () {
 });
 ```
 
-
 ## API
 
-https://babeljs.io/docs/learn-es2015/
+`babel` [https://babeljs.io/docs/learn-es2015/]
 
-### babel(options)
-
-#### options
-
-See the `babel` [options](https://babeljs.io/docs/usage/options/), except for `sourceMap` and `filename` which is handled for you.
-
-
-## Source Maps
-
-Use [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) like this:
+### babel inside of Gulp task
 
 ```js
 var gulp = require('gulp'),
