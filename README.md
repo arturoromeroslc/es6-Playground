@@ -8,8 +8,10 @@
 ## Install
 
 ```
-$ npm install --save-dev gulp-babel
+$ npm install
+$gulp
 ```
+##Start coding in ES6, inside of the es6 folder
 
 
 ## Usage
@@ -27,6 +29,8 @@ gulp.task('default', function () {
 
 
 ## API
+
+https://babeljs.io/docs/learn-es2015/
 
 ### babel(options)
 
@@ -80,11 +84,6 @@ gulp.task('default', function () {
     .pipe(babel())
     .pipe(logFileHelpers);
 })
-```
 
-## How to get started 
-Clone repo and run commands start coding ES6 code in es6 folder  
-```js
-npm install
-gulp
-```
+
+
