@@ -14,19 +14,6 @@ $ gulp
 ### Inside of the es6 folder start coding with ES6 spec or with Javascript next... (ES7) 
 
 
-## Usage
-
-```js
-var gulp = require('gulp');
-var babel = require('gulp-babel');
-
-gulp.task('default', function () {
-  return gulp.src('src/app.js')
-    .pipe(babel())
-    .pipe(gulp.dest('dist'));
-});
-```
-
 ## API
 
 `babel` [https://babeljs.io/docs/learn-es2015/]
