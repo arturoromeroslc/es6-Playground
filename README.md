@@ -4,8 +4,6 @@
 
 > Turn ES6 code into vanilla ES5 with no runtime required using [babel](https://github.com/babel/babel)
 
-*Issues with the output should be reported on the babel [issue tracker](https://github.com/babel/babel/issues).*
-
 
 ## Install
 
